@@ -114,8 +114,8 @@ Das Ziel dieses Projekts ist die Entwicklung einer benutzerfreundlichen, webbasi
   - Ein Benutzer kann viele Aufgaben in der Assignment-Tabelle haben, wenn ihm mehrere Aufgaben zugewiesen sind.
 
 ## Klassendiagramm
+![ERM DIAGRAMM](https://github.com/user-attachments/assets/7d136bc7-169a-4055-91c0-d0435859fd44)
 
-![Klassendiagramm](link-zum-klassendiagramm)
 
 ## Testplan
 
