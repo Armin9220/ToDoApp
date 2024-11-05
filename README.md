@@ -78,6 +78,8 @@ Das Ziel dieses Projekts ist die Entwicklung einer benutzerfreundlichen, webbasi
 
 ## Anforderungsanalyse
 
+[Insomnia](Insomnia_2024-11-05.json)
+
 ### User Stories
 
 1. **Aufgaben erstellen**
@@ -102,16 +104,16 @@ Das Ziel dieses Projekts ist die Entwicklung einer benutzerfreundlichen, webbasi
 
 ## Datenmodell
 
-- **User zu Task:**
-  - Ein Benutzer kann viele Aufgaben erstellen (über `created_by` in der Task-Tabelle).
-  - Ein Benutzer kann vielen Aufgaben zugewiesen werden (über die Assignment-Tabelle).
+User zu Task:
+Ein Benutzer kann viele Aufgaben erstellen, referenziert durch created_by in der TASK-Tabelle.
+Ein Benutzer kann vielen Aufgaben zugewiesen werden, basierend auf der ASSIGNMENT-Tabelle.
 
-- **Task zu Assignment:**
-  - Eine Aufgabe kann mehreren Benutzern zugewiesen werden, da sie in der Assignment-Tabelle mehrfach verknüpft ist.
-  - Eine Aufgabe wird durch die `task_id` in der Assignment-Tabelle referenziert.
+Task zu Assignment:
+Eine Aufgabe kann mehreren Benutzern zugewiesen werden, da sie in der ASSIGNMENT-Tabelle mehrfach verknüpft ist.
+Die task_id in der ASSIGNMENT-Tabelle referenziert die entsprechende Aufgabe.
 
-- **User zu Assignment:**
-  - Ein Benutzer kann viele Aufgaben in der Assignment-Tabelle haben, wenn ihm mehrere Aufgaben zugewiesen sind.
+User zu Assignment:
+Ein Benutzer kann viele Einträge in der ASSIGNMENT-Tabelle haben, wenn ihm mehrere Aufgaben zugewiesen sind.
 
 ## Klassendiagramm
 ![ERM DIAGRAMM](https://github.com/user-attachments/assets/7d136bc7-169a-4055-91c0-d0435859fd44)
