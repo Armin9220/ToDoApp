@@ -158,6 +158,11 @@ Das Ziel dieses Projekts ist die Entwicklung einer benutzerfreundlichen, webbasi
    - **Erwartetes Ergebnis:** Der Task sollte erfolgreich aktualisiert werden.
    - **Tatsächliches Ergebnis:** Fehler beim Aktualisieren des Tasks.
    - **Begründung:** Dieser Test zeigt ein Problem in der Implementierung der Task-Aktualisierung.
+  
+## Automatische Tests
+
+![image](https://github.com/user-attachments/assets/b6f7a2e3-a26a-44cd-a250-91adec6606a8)
+
 
 ### Testprotokoll
 
