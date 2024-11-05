@@ -14,11 +14,18 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Testklasse für den TaskService.
+ * Diese Klasse enthält Tests für die Methoden von TaskService.
+ */
 class TaskServiceTest {
     private TaskService taskService;
     private TaskRepository taskRepository;
     private UserRepository userRepository;
 
+    /**
+     * Setzt die benötigten Mock-Objekte und den TaskService vor jedem Test auf.
+     */
     @BeforeEach
     void setUp() {
         taskRepository = Mockito.mock(TaskRepository.class);
@@ -26,6 +33,9 @@ class TaskServiceTest {
         taskService = new TaskService(taskRepository, userRepository);
     }
 
+    /**
+     * Testet die Erstellung einer Aufgabe.
+     */
     @Test
     void testCreateTask() {
         Task task = new Task();
@@ -42,6 +52,9 @@ class TaskServiceTest {
         assertEquals("Test Task", createdTask.getTitle());
     }
 
+    /**
+     * Testet das Abrufen einer Aufgabe anhand ihrer ID.
+     */
     @Test
     void testGetTaskById() {
         Task task = new Task();
@@ -54,6 +67,9 @@ class TaskServiceTest {
         assertEquals("Test Task", foundTask.getTitle());
     }
 
+    /**
+     * Testet das Aktualisieren einer Aufgabe.
+     */
     @Test
     void testUpdateTask() {
         Task existingTask = new Task();
@@ -76,6 +92,9 @@ class TaskServiceTest {
         assertEquals(Task.TaskStatus.COMPLETED, result.getStatus());
     }
 
+    /**
+     * Testet das Löschen einer Aufgabe.
+     */
     @Test
     void testDeleteTask() {
         Task task = new Task();
@@ -87,6 +106,9 @@ class TaskServiceTest {
         Mockito.verify(taskRepository, Mockito.times(1)).delete(task);
     }
 
+    /**
+     * Testet das Abrufen einer nicht gefundenen Aufgabe.
+     */
     @Test
     void testGetTaskByIdNotFound() {
         Mockito.when(taskRepository.findById(1L)).thenReturn(Optional.empty());

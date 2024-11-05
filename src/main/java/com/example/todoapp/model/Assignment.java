@@ -6,8 +6,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
+/**
+ * Modellklasse, die eine Zuweisung zwischen einem Benutzer und einer Aufgabe darstellt.
+ * Eine Zuweisung enthält Informationen über den Benutzer, die Aufgabe und den Status der Zuweisung.
+ */
 @Entity
 public class Assignment {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,5 +25,5 @@ public class Assignment {
 
     private boolean completed;
 
-    // Constructors, Getters, Setters
+    // Konstruktoren, Getter, Setter
 }
