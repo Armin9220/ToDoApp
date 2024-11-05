@@ -119,4 +119,40 @@ class TaskServiceTest {
 
         assertEquals("Task not found with id 1", exception.getMessage());
     }
+
+    /**
+ * Testet das Aktualisieren einer nicht gefundenen Aufgabe.
+ */
+@Test
+void testUpdateTaskNotFound() {
+    Task updatedTask = new Task();
+    updatedTask.setTitle("Updated Task");
+    updatedTask.setDescription("Updated Description");
+    updatedTask.setStatus(Task.TaskStatus.COMPLETED);
+
+    Mockito.when(taskRepository.findById(1L)).thenReturn(Optional.empty());
+
+    Exception exception = assertThrows(ResourceNotFoundException.class, () -> {
+        taskService.updateTask(1L, updatedTask);
+    });
+
+    assertEquals("Task not found with id 1", exception.getMessage());
+}
+
+/**
+ * Testet das Abrufen einer Aufgabe mit einer ungültigen ID.
+ */
+@Test
+void testGetTaskByIdInvalidId() {
+    Long invalidTaskId = -1L; // Eine ungültige ID, die nicht existiert.
+
+    Mockito.when(taskRepository.findById(invalidTaskId)).thenReturn(Optional.empty());
+
+    Exception exception = assertThrows(ResourceNotFoundException.class, () -> {
+        taskService.getTaskById(invalidTaskId);
+    });
+
+    assertEquals("Task not found with id " + invalidTaskId, exception.getMessage());
+}
+
 }
