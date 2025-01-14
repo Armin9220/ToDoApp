@@ -1,0 +1,12 @@
+/home/goat/Documents/ToDoApp-main/src/main/java/com/example/todoapp/TodoappApplication.java
+/home/goat/Documents/ToDoApp-main/src/main/java/com/example/todoapp/controller/TaskController.java
+/home/goat/Documents/ToDoApp-main/src/main/java/com/example/todoapp/controller/UserController.java
+/home/goat/Documents/ToDoApp-main/src/main/java/com/example/todoapp/exception/ResourceNotFoundException.java
+/home/goat/Documents/ToDoApp-main/src/main/java/com/example/todoapp/model/Assignment.java
+/home/goat/Documents/ToDoApp-main/src/main/java/com/example/todoapp/model/Task.java
+/home/goat/Documents/ToDoApp-main/src/main/java/com/example/todoapp/model/User.java
+/home/goat/Documents/ToDoApp-main/src/main/java/com/example/todoapp/repository/AssignmentRepository.java
+/home/goat/Documents/ToDoApp-main/src/main/java/com/example/todoapp/repository/TaskRepository.java
+/home/goat/Documents/ToDoApp-main/src/main/java/com/example/todoapp/repository/UserRepository.java
+/home/goat/Documents/ToDoApp-main/src/main/java/com/example/todoapp/service/TaskService.java
+/home/goat/Documents/ToDoApp-main/src/main/java/com/example/todoapp/service/UserService.java
